@@ -17,3 +17,4 @@ backend/Migrations/20250623135852_addCtgeroies.cs
 fronted/.env
 backend/appsettings.Development.json
 backend/appsettings.Development.json
+Readme.md
