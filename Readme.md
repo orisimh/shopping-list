@@ -131,11 +131,6 @@ npm install
 # Start development server
 npm start
 
-# Build for production
-npm run build
-
-# Run tests
-npm test
 ```
 
 ## 📋 Configuration Files
@@ -151,7 +146,7 @@ npm test
 ## 🔧 Technologies Used
 
 ### Backend
-- ASP.NET Core 6
+- ASP.NET Core 8
 - Entity Framework Core
 - SQL Server
 - Web API
@@ -170,10 +165,3 @@ npm test
 - Environment-specific configuration files are not tracked in Git for security reasons
 - Default API port is 7059, default React port is 3000
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
