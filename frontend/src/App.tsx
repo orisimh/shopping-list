@@ -9,14 +9,8 @@ function App() {
     <Router>
       <Routes>
 
-        {/* Public route */}
-        {/* <Route path="/" element={<Login />} /> */}
-
-        {/* Protected routes */}
-        {/* <Route element={<ProtectedLayout />}> */}
-        <Route path="/order" element={<Order />} />
-          {/* <Route path="/deals" element={<List />} /> */}
-        {/* </Route> */}
+          <Route path="/order" element={<Order />} />
+          <Route path="/" element={<Navigate to="/order" replace />} />S
 
       </Routes>
     </Router>
