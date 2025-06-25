@@ -63,8 +63,13 @@ A full-stack web application built with ASP.NET Core Web API backend and React T
    # Update the database
    dotnet ef database update
    ```
+   
+5. **Build the backend**
+   ```bash
+   dotnet build
+   ```
 
-5. **Run the backend:**
+6. **Run the backend:**
    ```bash
    dotnet run
    ```
