@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-# Project Name
 =======
 # Shopping List
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
 
 A full-stack web application built with ASP.NET Core Web API backend and React TypeScript frontend, featuring modern UI components and state management.
 
 ## 🏗️ Architecture
 
-<<<<<<< HEAD
-- **Backend**: ASP.NET Core 6 Web API with SQL Server database
-=======
 - **Backend**: ASP.NET Core 8 Web API with SQL Server database
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
 - **Frontend**: React with TypeScript, Material-UI components, and Redux Toolkit for state management
 
 ## 📁 Project Structure
@@ -26,11 +19,8 @@ A full-stack web application built with ASP.NET Core Web API backend and React T
 
 ### Prerequisites
 
-<<<<<<< HEAD
-- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-=======
+
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
 - [Node.js](https://nodejs.org/) (version 16 or higher)
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or SQL Server Express
 
@@ -75,11 +65,7 @@ A full-stack web application built with ASP.NET Core Web API backend and React T
    # Update the database
    dotnet ef database update
    ```
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
 5. **Run the backend:**
    ```bash
    dotnet run
@@ -147,14 +133,8 @@ npm install
 # Start development server
 npm start
 
-<<<<<<< HEAD
 # Build for production
 npm run build
-
-# Run tests
-npm test
-=======
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
 ```
 
 ## 📋 Configuration Files
@@ -170,11 +150,7 @@ npm test
 ## 🔧 Technologies Used
 
 ### Backend
-<<<<<<< HEAD
-- ASP.NET Core 6
-=======
 - ASP.NET Core 8
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
 - Entity Framework Core
 - SQL Server
 - Web API
@@ -193,13 +169,3 @@ npm test
 - Environment-specific configuration files are not tracked in Git for security reasons
 - Default API port is 7059, default React port is 3000
 
-<<<<<<< HEAD
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-=======
->>>>>>> 5cc6edd136eda88949b1cdf3091c9949ef5a645e
