@@ -1,4 +1,3 @@
-=======
 # Shopping List
 
 A full-stack web application built with ASP.NET Core Web API backend and React TypeScript frontend, featuring modern UI components and state management.
