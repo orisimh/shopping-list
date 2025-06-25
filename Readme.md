@@ -1,10 +1,10 @@
-# Project Name
+# Shopping List
 
 A full-stack web application built with ASP.NET Core Web API backend and React TypeScript frontend, featuring modern UI components and state management.
 
 ## 🏗️ Architecture
 
-- **Backend**: ASP.NET Core 6 Web API with SQL Server database
+- **Backend**: ASP.NET Core 8 Web API with SQL Server database
 - **Frontend**: React with TypeScript, Material-UI components, and Redux Toolkit for state management
 
 ## 📁 Project Structure
