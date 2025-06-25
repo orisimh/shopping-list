@@ -40,7 +40,7 @@ const OrderInput: React.FC = () => {
     }));
 
     setProductName('');
-    setSelectedCategory('');
+    setSelectedCategory('0');
     setIsAdding(false);
   };
 
