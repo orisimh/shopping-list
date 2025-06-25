@@ -38,12 +38,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContextSvc = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    //Migration: This is the programmatic equivalent to Update-Database
-    await dbContextSvc.Database.MigrateAsync();
-}
+// using (var scope = app.Services.CreateScope())
+// {
+//     var dbContextSvc = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+//     //Migration: This is the programmatic equivalent to Update-Database
+//     await dbContextSvc.Database.MigrateAsync();
+// }
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
