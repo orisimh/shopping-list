@@ -22,18 +22,15 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Add services to the container.
+// Add sql server services to the container.
 // builder.Services.AddDbContext<AppDbContext>(options =>
 //     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
 //             sqlOptions => sqlOptions.EnableRetryOnFailure()
-
 //     )
-    
 //     );
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-            //Service: An instance of db context
 
 
 builder.Services.AddControllers();
@@ -43,12 +40,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// using (var scope = app.Services.CreateScope())
-// {
-//     var dbContextSvc = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-//     //Migration: This is the programmatic equivalent to Update-Database
-//     await dbContextSvc.Database.MigrateAsync();
-// }
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContextSvc = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    //Migration: This is the programmatic equivalent to Update-Database
+    await dbContextSvc.Database.MigrateAsync();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
