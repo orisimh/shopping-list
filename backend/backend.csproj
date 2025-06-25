@@ -30,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Remove Microsoft.EntityFrameworkCore.SqlServer -->
+    <!-- <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" /> -->
     <!-- Add PostgreSQL package instead -->
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
