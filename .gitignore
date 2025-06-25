@@ -1,0 +1,19 @@
+# Backend
+bin/
+obj/
+appsettings.Development.json
+backend/Migrations/20250623133617_InitialCreate.cs
+backend/Migrations/20250623133617_InitialCreate.Designer.cs
+backend/Migrations/20250623135852_addCtgeroies.Designer.cs
+backend/Migrations/AppDbContextModelSnapshot.cs
+backend/Migrations/20250623135852_addCtgeroies.cs
+
+# Frontend
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+fronted/.env
+backend/appsettings.Development.json
+backend/appsettings.Development.json
