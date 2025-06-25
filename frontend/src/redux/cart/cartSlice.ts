@@ -21,8 +21,6 @@ export const createOrder = createAsyncThunk(
   'cart/createOrder',
   async (products: Product[], { rejectWithValue }) => {
     try {
-        //const {products, isLoading, orderId}  = useSelector((state: RootState) => state.cart);
-
       return await callApi('api/order/create', 'POST', products);
     } catch (error) {
       return rejectWithValue(error instanceof Error ? error.message : 'שגיאה לא ידועה');
@@ -83,8 +81,6 @@ export const cartSlice = createSlice({
         // state.orderId = action.payload.id;
         state.isLoading = false;
         state.isError = null;
-        //alert(`Order ${state.orderId} completed successfully!`);
-        //dispatch(clearCart());
       })
       .addCase(createOrder.rejected, (state, action) => {
         state.isLoading = false;

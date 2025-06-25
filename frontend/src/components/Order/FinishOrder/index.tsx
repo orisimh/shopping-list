@@ -2,31 +2,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../../../redux/store";
 import { useState } from "react";
 import { clearCart, createOrder } from "../../../redux/cart/cartSlice";
-import { Alert, AlertTitle, Box, Button, CircularProgress, Fade, Snackbar } from "@mui/material";
-import { callApi } from "../../../utils/api/callApi";
-import { CheckCircle } from "@mui/icons-material";
+import { Box, Button, CircularProgress, Fade } from "@mui/material";
+
 
 
 // Finish Order Component
 const FinishOrder: React.FC = () => {
+
   const {products, isLoading}  = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch<AppDispatch>();
-  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFinishOrder = async () => {
     
-    //setIsProcessing(true);
-
-    /// Dispatch async action and wait for result
-    const result = await dispatch(createOrder(products)).unwrap(); //dispatch(createOrder());
+    const result = await dispatch(createOrder(products)).unwrap(); 
     alert(`Order ${result.id} completed successfully!`);
     dispatch(clearCart());
     
-    //const res = await callApi('api/order/create', 'POST', products)
-    
-    // alert(`Order ${orderId} completed successfully!`);
-    // dispatch(clearCart());
-    //setIsProcessing(false);
   };
 
   if (products.length == 0) return null;

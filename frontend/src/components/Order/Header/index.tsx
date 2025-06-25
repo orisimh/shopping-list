@@ -34,7 +34,7 @@ const  Header: React.FC = () => {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <LocalMall sx={{ fontSize: 32, color: 'primary.main' }} />
           <Typography variant="h5" component="h1" sx={{ fontWeight: 700, color: 'primary.main' }}>
-            ShopCart Pro
+            ShopCart
           </Typography>
         </Box>
         

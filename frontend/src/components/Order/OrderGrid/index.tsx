@@ -4,12 +4,12 @@ import { Box, Card, CardContent, Chip, Fade, Grid, Typography } from "@mui/mater
 import { ShoppingCart } from "@mui/icons-material";
 import { Product } from "../../../types/Item";
 
-// Product Grid Component
+
 const OrderGrid: React.FC = () => {
 
   const products = useSelector((state: RootState) => state.cart.products);
   
-  console.log('Products:', products);
+  // console.log('Products:', products);
   // Group products by category
   const productsByCategory = products.reduce((acc, product) => {
     if (!acc[product.categoryName]) {
@@ -20,7 +20,6 @@ const OrderGrid: React.FC = () => {
   }, {} as Record<string, Product[]>);
 
   const categories = Object.keys(productsByCategory);
-  console.log('Categories:', categories);
 
   if (categories.length === 0) {
     return (

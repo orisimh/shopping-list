@@ -13,7 +13,6 @@ const OrderInput: React.FC = () => {
   const [selectedCategoryName, setSelectedCategoryName] = useState('0');
   const [isAdding, setIsAdding] = useState(false);
 
-//   const categories = useSelector((state: RootState) => state.cart.categories);
   const dispatch = useDispatch<AppDispatch>();
 
   const { categories, isLoading, isError } = useSelector((state: RootState) => state.cart);
@@ -107,12 +106,10 @@ const OrderInput: React.FC = () => {
             
             <Grid size={{ xs: 12, sm: 4 }}>
               <FormControl fullWidth 
-              //  dir="rtl"
                 sx={{ 
-                  direction: 'rtl',
                   '& .MuiInputLabel-root': {
-                    right: 14,           // Position from right instead of left
-                    left: 'auto',        // Remove left positioning
+                    right: 14,           
+                    left: 'auto',        
                     transformOrigin: 'top right', // Transform from right side
                     '&.MuiInputLabel-shrink': {
                       transform: 'translate(0, -9px) scale(0.75)',
@@ -134,7 +131,6 @@ const OrderInput: React.FC = () => {
                         borderRadius: 2,
                         '& .MuiSelect-select': {
                             textAlign: 'center',
-                            direction: 'rtl'
                         },
                         '& .MuiSelect-icon': {
                           left: 7,
@@ -145,8 +141,6 @@ const OrderInput: React.FC = () => {
                         PaperProps: {
                             sx: {
                             '& .MuiMenuItem-root': {
-                                textAlign: 'center',
-                                direction: 'rtl',
                                 justifyContent: 'center'
                             }
                             }
@@ -184,7 +178,6 @@ const OrderInput: React.FC = () => {
                   // background: 'linear-gradient(0deg, #d9d9d9, #d3d3d3)', //'linear-gradient(45deg, #6366f1, #8b5cf6)',
                   height: 56,
                    '& .MuiButton-endIcon': {
-                    // marginLeft: 10,
                     marginRight: 1
                   },
                   '&:hover': {

@@ -1,12 +1,12 @@
 import { Paper, Typography, Zoom } from "@mui/material";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 
 // Items Total Component
 const ItemsTotal: React.FC = () => {
   const products = useSelector((state: RootState) => state.cart.products);
-  const totalItems = useCallback(
+  const totalItems = useMemo(
     () => products.reduce((sum, product) => sum + product.quantity, 0),
     [products]
   );
@@ -24,8 +24,7 @@ const ItemsTotal: React.FC = () => {
         }}
       >
         <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-          {/* Total: {totalItems()} products in the cart */}
-          סה"כ: {totalItems()} מוצרים בסל
+          סה"כ: {totalItems} מוצרים בסל
         </Typography>
       </Paper>
     </Zoom>
