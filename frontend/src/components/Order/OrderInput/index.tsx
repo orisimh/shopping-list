@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Provider, useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from "../../../redux/store";
 import { addProduct, fetchCategories } from '../../../redux/cart/cartSlice';
-import { Button, Card, CardContent, Fade, FormControl, InputLabel, MenuItem, Grid, Select, SelectChangeEvent, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, Fade, FormControl, InputLabel, MenuItem, Grid, Select, SelectChangeEvent, TextField, Typography, CircularProgress } from '@mui/material';
 import { Add, Category, CheckCircle } from '@mui/icons-material';
 
 const OrderInput: React.FC = () => {
@@ -105,7 +105,16 @@ const OrderInput: React.FC = () => {
               />
             </Grid>
             
-            <Grid size={{ xs: 12, sm: 4 }}>
+            <Grid size={{ xs: 12, sm: 4 }} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              {isLoading ?  
+                    <CircularProgress 
+                      size={25} 
+                      sx={{ 
+                        '& .MuiCircularProgress-circle': {
+                          strokeLinecap: 'round',
+                        }
+                      }} 
+                    /> :
               <FormControl fullWidth 
               //  dir="rtl"
                 sx={{ 
@@ -124,8 +133,10 @@ const OrderInput: React.FC = () => {
                   }
                 }}
               >
+                
                 <InputLabel>קטגוריה</InputLabel>
-                <Select
+                  
+                    <Select
                         value={selectedCategory}
                         label="קטגוריה"
                         onChange={handleCategoryChange}
@@ -153,13 +164,15 @@ const OrderInput: React.FC = () => {
                         }
                         }}
                     >
-                        <MenuItem 
+                        
+                       <MenuItem 
                         key="0" 
                         value="0" 
                         disabled
                         >
                         בחר קטגוריה
-                        </MenuItem>
+                        </MenuItem> 
+                        
                         {categories.map((category) => (
                         <MenuItem 
                             key={category.id} 
@@ -168,8 +181,10 @@ const OrderInput: React.FC = () => {
                             {category.name}
                         </MenuItem>
                         ))}
-                    </Select>
+                      </Select>
+                  
                 </FormControl>
+        }
             </Grid>
             
             <Grid size={{ xs: 12, sm: 4 }}>
