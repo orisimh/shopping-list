@@ -8,15 +8,15 @@ import { Add, Category, CheckCircle } from '@mui/icons-material';
 
 const OrderInput: React.FC = () => {
 
+  const dispatch = useDispatch<AppDispatch>();
+
   const [productName, setProductName] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('0');
   const [selectedCategoryName, setSelectedCategoryName] = useState('0');
   const [isAdding, setIsAdding] = useState(false);
+  const { categories, isLoading } = useSelector((state: RootState) => state.cart);
 
-//   const categories = useSelector((state: RootState) => state.cart.categories);
-  const dispatch = useDispatch<AppDispatch>();
 
-  const { categories, isLoading, isError } = useSelector((state: RootState) => state.cart);
 
   useEffect(() => {
     //if (categories.length === 0) {
