@@ -15,7 +15,7 @@ const FinishOrder: React.FC = () => {
   const handleFinishOrder = async () => {
     
     const result = await dispatch(createOrder(products)).unwrap(); 
-    alert(`Order ${result.id} completed successfully!`);
+    alert(`הזמנה מספר ${result.id} נוצרה בהצלחה!`);
     dispatch(clearCart());
     
   };
